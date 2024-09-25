@@ -256,7 +256,7 @@ setGeneric("calculateActivity",function(object, method="drews", cancer.subset=NU
 #' @param method The method used for calculating the signature activities.
 #'   Default is "drews"
 #' @param cores Number of threads/cores to use for parallel processing
-#' @param build Genome build to use, either hg19 or hg38 (default: hg19)
+#' @param build Genome build to use, either hg19 or hg38 or mm10 (default: hg19)
 #' @param cancer.subset A TCGA cancer subset (e.g. BRCA or KIRC) identifier to
 #'   select a subset of signatures for calculating signature activity
 #' @return A SigQuant class object with four activity matrices stored in the
@@ -280,7 +280,7 @@ setGeneric("calculateActivity",function(object, method="drews", cancer.subset=NU
 #'   package](https://cran.r-project.org/web/packages/doParallel/index.html).
 #'   * build: character string to specify the genome build to use when extracting
 #'   copy number features. Only human data using either hg19 or hg38 is
-#'   currently supported.
+#'   currently supported, or mouse data using mm10.
 #'   * cancer.subset: cancer.subset parameter allows users
 #'   to calculate copy number signature activities for subsets of the copy
 #'   number signatures defined in drews et al. 2022 which are specific to a

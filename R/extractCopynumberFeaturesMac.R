@@ -8,6 +8,9 @@ extractCopynumberFeaturesMac <- function(CN_data,cores = 1, build="hg19"){
         chrlen <- get(utils::data("hg38.chrom.sizes",envir = environment()))
         #gaps <- get(load("data/gap_hg19.rda"))
         gaps <- get(utils::data("gap_hg38",envir = environment()))
+    } else if (build == "mm10") {
+        chrlen <- get(utils::data("mm10.chrom.sizes",envir = environment()))
+        gaps <- get(utils::data("gap_mm10",envir = environment()))
     }
     centromeres <- gaps[gaps[,8]=="centromere",]
     if(cores > 1) {

@@ -6,7 +6,7 @@
 #'
 #' @param data Unrounded absolute copy number data
 #' @param experimentName A user-specified name of the experiment
-#' @param build Genome build to use, either hg19 or hg38 (default: hg19)
+#' @param build Genome build to use, either hg19 or hg38 or mm10 (default: hg19)
 #' @details * data: Input data for this function should be unrounded (or
 #'   rounded) copy number data which can be provided in various formats. In the
 #'   first instance, copy number data can be a delimited file containing segment
@@ -22,7 +22,7 @@
 #'   any functions.
 #'   * build: character string to specify the genome build to use when extracting
 #'    copy number features. Only human data using either hg19 or hg38 is
-#'    currently supported.
+#'    currently supported, or mouse data using mm10.
 #' @return A CNQuant class object
 #' @seealso [CNQuant-class]
 #' @seealso [quantifyCNSignatures()]
@@ -35,7 +35,7 @@ createCNQuant <- function(data=NULL,experimentName = "defaultExperiment",build =
     if(is.null(data)){
         stop("no data provided\n")
     }
-    supported_builds <- c("hg19","hg38")
+    supported_builds <- c("hg19","hg38","mm10")
     if(!build %in% supported_builds){
         stop(paste0("unknown build - supported builds: ",
                     paste0(supported_builds,collapse = ", ")))

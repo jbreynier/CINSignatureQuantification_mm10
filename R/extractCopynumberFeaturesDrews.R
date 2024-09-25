@@ -7,6 +7,9 @@ extractCopynumberFeaturesDrews = function(CN_data, cores = 1, allowedError = 0.1
     } else if (build == "hg38") {
         chrlen <- get(utils::data("hg38.chrom.sizes",envir = environment()))
         gaps <- get(utils::data("gap_hg38",envir = environment()))
+    } else if (build == "mm10") {
+        chrlen <- get(utils::data("mm10.chrom.sizes",envir = environment()))
+        gaps <- get(utils::data("gap_mm10",envir = environment()))
     }
     centromeres = gaps[gaps[,8]=="centromere",]
 

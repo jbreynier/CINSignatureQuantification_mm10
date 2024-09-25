@@ -18,7 +18,7 @@
 #' @slot samples.current Object of type `"numeric"` containing current number of
 #'   samples within the object.
 #' @slot build Object of type `"character"` containing the specified genome
-#'   build (hg19 or hg38) by [createCNQuant()] or [quantifyCNSignatures()].
+#'   build (hg19 or hg38 or mm10) by [createCNQuant()] or [quantifyCNSignatures()].
 #' @slot feature.method Object of type `"character"` containing the specified
 #'   copy number signatures method for the `CNQuant` class object by
 #'   [createCNQuant()] or [quantifyCNSignatures()].

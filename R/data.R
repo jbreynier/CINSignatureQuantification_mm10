@@ -42,6 +42,28 @@ NULL
 #' @format A data frame with 24 rows and 2 variables
 NULL
 
+#' gap_mm10
+#'
+#' Chromosomal banding and position of genomic features in genome build mm10
+#'
+#' @docType data
+#' @keywords datasets
+#' @name gap_mm10
+#' @usage data(gap_mm10)
+#' @format A data frame with 575 rows and 9 variables
+NULL
+
+#' mm10.chrom.sizes
+#'
+#' Chromosomal lengths for genome build mm10
+#'
+#' @docType data
+#' @keywords datasets
+#' @name mm10.chrom.sizes
+#' @usage data(mm10.chrom.sizes)
+#' @format A data frame with 21 rows and 2 variables
+NULL
+
 #' Drews2022_CX3CX2_Clinical_classifier
 #'
 #' List of mean and scaling factors for signatures 2 and 3 for the prediction of
